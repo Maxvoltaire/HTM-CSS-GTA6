@@ -78,6 +78,27 @@
     border-radius: 50%;
 }
 
+/* ----------------------- */
+
+.logo{
+    z-index: 10;
+    height: 15vh;
+    width: auto;
+    margin-left: -10vw;
+    margin-top: 10vh;
+}
+
+.element-nav a{
+    color: var(--white-color);
+    text-decoration: none;
+
+}
+
+.element-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 /* ----------------------- */
 /* ------- Header -------- */

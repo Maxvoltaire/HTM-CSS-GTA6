@@ -89,6 +89,10 @@
     margin-top: 10vh;
 }
 
+.element-nav a:hover{
+    text-decoration: underline;
+}
+
 .element-nav a{
     color: var(--white-color);
     text-decoration: none;
@@ -378,7 +382,7 @@ header video{
 
 footer{
     width: 100%;
-    height: 20vh;
+    height: 12vh;
     background-color: var(--black-color);
 }
 
@@ -389,11 +393,16 @@ footer .footer-buttons,footer .footer-buttons button{
     font-size: 1.3rem;
 }
 
+footer .footer-buttons .content-button :hover{
+    color: var(--white-color);
+    border-bottom: var(--white-color) 1px solid;
+}
+
 .footer-buttons {
     display: flex;
     width: 25%;
     margin-left: 5%;
-    padding-top: 5%;
+    padding-top: 2%;
     justify-content: space-around;
 }
 
@@ -404,4 +413,81 @@ footer .footer-buttons,footer .footer-buttons button{
     align-items: center;
     /* margin-left: 25%;
     padding-top: 5%; */
+}
+
+.languages-selecter{
+    font-family: 'chalet';
+    font-size: 1.3rem;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: #000 0rem solid;
+}
+
+.footer-selecteur {
+    padding-top: 2%;
+    margin-left: 55%;
+}
+
+.footer-selecteur i {
+    font-size: 1.3rem;
+}
+
+.footer-links a{
+    text-decoration: none;
+    color: var(--white-color);
+    width: 25%;
+    
+}
+
+.footer-links{
+    display: flex;
+    /* width: 50%; */
+}
+
+.block-links a{
+    width: 105%;
+    text-align: center;
+}
+
+.block-links{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.plateforme-button {    
+    display: flex;
+    color: var(--white-color);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.plateforme-button img{
+    /* color: var(--white-color); */
+    width: 33%;
+    height: auto;
+    /* background-color: var(--white-color); */
+}
+
+.plateforme-button h3 {
+    font-size: 0.9rem;
+    text-align: center;
+
+}
+
+
+/* ----------------------- */
+/* ------- stars -------- */
+/* ----------------------- */
+
+.content-start img{
+    width: 15%;
+    height: auto;
+}
+
+.content-start{
+    display: flex;
+    position: fixed;
+    left: 80%;
+    top : 12%;
 }

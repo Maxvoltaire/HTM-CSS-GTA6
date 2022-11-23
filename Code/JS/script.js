@@ -138,12 +138,12 @@ function changeLanguage(){
     case 'Français':
 
     case 'English':
-         google.language.translate(text, 'es', 'en', function(result) {
-            var translated = document.getElementById("translation");
-            if (result.translation) {
-                translated.innerHTML = result.translation;
-            }
-        });
+        //  google.language.translate(text, 'es', 'en', function(result) {
+        //     var translated = document.getElementById("translation");
+        //     if (result.translation) {
+        //         translated.innerHTML = result.translation;
+        //     }
+        // });
 
     case 'Deutch':
 

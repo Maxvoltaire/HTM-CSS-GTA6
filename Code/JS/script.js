@@ -143,7 +143,7 @@ function changeLanguage(){
         //     if (result.translation) {
         //         translated.innerHTML = result.translation;
         //     }
-        // });
+        // }); 
 
     case 'Deutch':
 

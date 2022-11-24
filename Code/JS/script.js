@@ -1,5 +1,6 @@
 let id = 0; 
 $(document).ready(function() {
+
     checkWidthWindows();
     hoverButton();
     changeLanguage();
@@ -130,7 +131,8 @@ $(document).ready(function() {
     })
 
     $('.button-burger').on('click',function(){
-
+        // console.log('test');
+        $(".content-burger-menu").hasClass('d-none') ? $(".content-burger-menu").removeClass('d-none'):$(".content-burger-menu").addClass('d-none');
     })
 
 });
@@ -138,7 +140,7 @@ $(document).ready(function() {
 function checkWidthWindows (){
 
     if($(window).width() < 1500 && $('header').hasClass("main-menu")){
-        console.log("passe1")
+        // console.log("passe1")
         let _HTLM = '';
 
         _HTLM += '<header class="second-menu">';
@@ -149,11 +151,14 @@ function checkWidthWindows (){
         _HTLM += '</header>';
    
         $(".main-menu").replaceWith(_HTLM);
+        $(".content-text-infos").attr("style","width: 50%;height: auto;display: flex;flex-direction: column;margin-top: 20%;");
+
 
     }
 
     if($(window).width() >= 1500 && $('header').hasClass("second-menu")){
-        console.log("passe2")
+        // console.log("passe2")
+        $(".content-text-infos").attr("style","width: 50%;height: auto;display: flex;flex-direction: column;");
 
         let _HTLM = '';
 
@@ -188,6 +193,7 @@ function checkWidthWindows (){
    
             $(".second-menu").replaceWith(_HTLM);
 
+
     }
     setTimeout(checkWidthWindows,1000);
 
@@ -199,7 +205,14 @@ function changeLanguage(){
    console.log($('.languages-selecter').val());
     switch ($('.languages-selecter').val()) {
     case 'Français':
-
+                let _HTMLNAV ='<div class="block-nav-1"><div class="element-nav"><a href="#">Vue d\'ensemble</a><a href="#">GTA online</a><a href="#">GTA+</a><img alt="logo rockstar" src="Images/rockstart.svg"><p>|</p><img alt="gta 6" class="logo" src="Images/gta-6.png"><a href="#" class="border border-white border-2 p-1 font-weight-bold">ACHETER MAINTENANT</a><a href="#">Assistance</a><a href="#">Guides</a></div><div class="circle"></div><div class="cache"></div></div>';
+                $('.block-nav-1').replaceWith(_HTMLNAV);
+                let _HTMLCONTENTINFOS ='<div class="content-text-infos" aria-details="Synopsis de l\'histoire"><img alt="Logo gta 6" src="Images/gta-6.png"><h2>Bienvenue à Vice City</h2><p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p><P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P></div>';
+                let _HTMLCONTENTBUTTON ='<div class="content-button"><button aria-details="Redirection sur la page de vente liée à la plateforme">Sélectionner une plateforme</button><img alt="pegi 18" src="Images/pegi-18.png"></div>';
+                $('.content-button').replaceWith(_HTMLCONTENTBUTTON);
+                $('.block-infos .content-text-infos').replaceWith(_HTMLCONTENTINFOS);
+                let _HTMLCONTENTINFOS2 ='<div class="content-text-infos" aria-details="encore un synopsis"> <img alt="gta online" src="Images/gta-online.png"> <h2>Bienvenue à Vice City</h2> <p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p> <P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P> </div>';
+                $('.block-infos-2 .content-text-infos').replaceWith(_HTMLCONTENTINFOS2);
     case 'English':
 
     case 'Deutch':

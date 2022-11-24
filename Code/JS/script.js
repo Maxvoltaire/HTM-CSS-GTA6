@@ -3,7 +3,12 @@ $(document).ready(function() {
 
     checkWidthWindows();
     hoverButton();
-    changeLanguage();
+    // changeLanguage();
+
+
+    $(".languages-selecter").on('change',function(){
+        changeLanguage();
+    });
 
     document.body.addEventListener('mousewheel', (e) => {
         let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
@@ -205,19 +210,29 @@ function changeLanguage(){
    console.log($('.languages-selecter').val());
     switch ($('.languages-selecter').val()) {
     case 'Français':
-                let _HTMLNAV ='<div class="block-nav-1"><div class="element-nav"><a href="#">Vue d\'ensemble</a><a href="#">GTA online</a><a href="#">GTA+</a><img alt="logo rockstar" src="Images/rockstart.svg"><p>|</p><img alt="gta 6" class="logo" src="Images/gta-6.png"><a href="#" class="border border-white border-2 p-1 font-weight-bold">ACHETER MAINTENANT</a><a href="#">Assistance</a><a href="#">Guides</a></div><div class="circle"></div><div class="cache"></div></div>';
+                var _HTMLNAV ='<div class="block-nav-1"><div class="element-nav"><a href="#">Vue d\'ensemble</a><a href="#">GTA online</a><a href="#">GTA+</a><img alt="logo rockstar" src="Images/rockstart.svg"><p>|</p><img alt="gta 6" class="logo" src="Images/gta-6.png"><a href="#" class="border border-white border-2 p-1 font-weight-bold">ACHETER MAINTENANT</a><a href="#">Assistance</a><a href="#">Guides</a></div><div class="circle"></div><div class="cache"></div></div>';
                 $('.block-nav-1').replaceWith(_HTMLNAV);
-                let _HTMLCONTENTINFOS ='<div class="content-text-infos" aria-details="Synopsis de l\'histoire"><img alt="Logo gta 6" src="Images/gta-6.png"><h2>Bienvenue à Vice City</h2><p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p><P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P></div>';
-                let _HTMLCONTENTBUTTON ='<div class="content-button"><button aria-details="Redirection sur la page de vente liée à la plateforme">Sélectionner une plateforme</button><img alt="pegi 18" src="Images/pegi-18.png"></div>';
+                var _HTMLCONTENTINFOS ='<div class="content-text-infos" aria-details="Synopsis de l\'histoire"><img alt="Logo gta 6" src="Images/gta-6.png"><h2>Bienvenue à Vice City</h2><p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p><P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P></div>';
+                var _HTMLCONTENTBUTTON ='<div class="content-button"><button aria-details="Redirection sur la page de vente liée à la plateforme">Sélectionner une plateforme</button><img alt="pegi 18" src="Images/pegi-18.png"></div>';
                 $('.content-button').replaceWith(_HTMLCONTENTBUTTON);
                 $('.block-infos .content-text-infos').replaceWith(_HTMLCONTENTINFOS);
-                let _HTMLCONTENTINFOS2 ='<div class="content-text-infos" aria-details="encore un synopsis"> <img alt="gta online" src="Images/gta-online.png"> <h2>Bienvenue à Vice City</h2> <p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p> <P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P> </div>';
+                var _HTMLCONTENTINFOS2 ='<div class="content-text-infos" aria-details="encore un synopsis"> <img alt="gta online" src="Images/gta-online.png"> <h2>Bienvenue à Vice City</h2> <p>Lorsqu\'un dealeur tua leurs parents des deux jumeaux prirent la décision de se venger mais de manière différente. L\'un voulant se venger en dirigeant une société de lutte drogue et l\'autre rejoint un cartelle pour trouver et vengez là mort de ses parents.</p> <P>Les joueurs actuels peuvent transférer leurs progressions dans le mode Histoire de GTAV et dans GTA Online, ainsi que leurs personnages, sur PlayStation 5 et Xbox Series X|S via une migration unique.</P> </div>';
                 $('.block-infos-2 .content-text-infos').replaceWith(_HTMLCONTENTINFOS2);
     case 'English':
+                var _HTMLNAV ='    <div class="block-nav-1"> <div class="element-nav"> <a href="#">Overview</a> <a href="#">GTA online</a> <a href="#">GTA+</a> <img alt="logo rockstar" src="Images/rockstart.svg"> <p>|</p> <img alt="gta 6" class="logo" src="Images/gta-6.png"> <a href="#" class="border border-white border-2 p-1 font-weight-bold">BUY NOW</a> <a href="#">Help</a> <a href="#">Guides</a> </div> <div class="circle"></div> <div class="cache"></div> </div>';
+                $('.block-nav-1').replaceWith(_HTMLNAV);
+                var _HTMLCONTENTINFOS ='    <div class="content-text-infos" aria-details="Synopsis de l\'histoire"><img alt="Logo gta 6" src="Images/gta-6.png"><h2>Welcome Vice City</h2><p>When their parents was killed by a dealer, twins made their decision : Revenge!One of them want to lead a counter-narcotics squad, the second one join a cartel to find and kill thekiller.</p><P>Current GTA V players are able to transfer their own progression from history and online mods and theircharacters on PlayStation 5 and X|S series Xbox(single migration).</P></div>';
+                $('.block-infos .content-text-infos').replaceWith(_HTMLCONTENTINFOS);
+                var _HTMLCONTENTBUTTON ='    <div class="content-button"><button aria-details="Redirection sur la page de vente liée à la plateforme">Choose your platform</button><img alt="pegi 18" src="Images/pegi-18.png"></div>';
+                $('.content-buy .content-button').replaceWith(_HTMLCONTENTBUTTON);
+                var _HTMLCONTENTINFOS2 =' <div class="content-text-infos" aria-details="encore un synopsis"><img alt="gta online" src="Images/gta-online.png"><h2>Welcome Vice City</h2><p>When their parents was killed by a dealer, twins made their decision : Revenge!One of them want to lead a counter-narcotics squad, the second one join a cartel to find and kill thekiller.</p><P>Current GTA V players are able to transfer their own progression from history and online mods and theircharacters on PlayStation 5 and X|S series Xbox(single migration).</P></div><div class="content-image-infos"><img alt="gta online" src="Images/gta-online-image.png"></div>';
+                $('.block-infos-2 .content-text-infos').replaceWith(_HTMLCONTENTINFOS2);
 
     case 'Deutch':
 
     }
+
+    // setTimeout(changeLanguage,1000);
 
 }
 

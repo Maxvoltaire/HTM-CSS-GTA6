@@ -1,8 +1,9 @@
 let id = 0; 
 $(document).ready(function() {
-
+    checkWidthWindows();
     hoverButton();
     changeLanguage();
+
     document.body.addEventListener('mousewheel', (e) => {
         let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
         let position = $('.content-start').offset();
@@ -128,9 +129,71 @@ $(document).ready(function() {
         // console.log("id",id);
     })
 
+    $('.button-burger').on('click',function(){
+
+    })
+
 });
 
-google.load("language", "1");
+function checkWidthWindows (){
+
+    if($(window).width() < 1500 && $('header').hasClass("main-menu")){
+        console.log("passe1")
+        let _HTLM = '';
+
+        _HTLM += '<header class="second-menu">';
+        _HTLM += '<i class="fa-solid fa-bars text-light display-2 button-burger"></i>';
+        _HTLM += '<video autoplay muted playsinline loop>';
+        _HTLM += '<source type="video/mp4" src="Video/Grand-Theft-Auto-6-Trailer.mp4"/>';
+        _HTLM += '</video>';
+        _HTLM += '</header>';
+   
+        $(".main-menu").replaceWith(_HTLM);
+
+    }
+
+    if($(window).width() >= 1500 && $('header').hasClass("second-menu")){
+        console.log("passe2")
+
+        let _HTLM = '';
+
+
+       
+             _HTLM += '    <header class="main-menu">';
+
+             _HTLM += '    <div class="block-nav-2">';
+             _HTLM += '    <div></div>';
+             _HTLM += '    <div class="circle"></div>';
+             _HTLM += '    <div class="cache"></div>';
+             _HTLM += '    </div>';
+             _HTLM += '    <div class="block-nav-1">';
+             _HTLM += '    <div class="element-nav">';
+             _HTLM += '    <a href="#">Vue d\'ensemble</a>';
+             _HTLM += '    <a href="#">GTA online</a>';
+             _HTLM += '    <a href="#">GTA+</a>';
+             _HTLM += '    <img src="Images/rockstart.svg">';
+             _HTLM += '    <p>|</p>';
+             _HTLM += '    <img class="logo" src="Images/gta-6.png">';
+             _HTLM += '    <a href="#" class="border border-white border-2 p-1 font-weight-bold">ACHETER MAINTENANT</a>';
+             _HTLM += '    <a href="#">Assistance</a>';
+             _HTLM += '    <a href="#">Guides</a>';
+             _HTLM += '    </div>';
+             _HTLM += '    <div class="circle"></div>';
+             _HTLM += '    <div class="cache"></div>';
+             _HTLM += '    </div>';
+             _HTLM += '    <video autoplay muted playsinline loop>';
+             _HTLM += '    <source type="video/mp4" src="Video/Grand-Theft-Auto-6-Trailer.mp4"/>';
+             _HTLM += '    </video>';
+             _HTLM += '    </header>';
+   
+            $(".second-menu").replaceWith(_HTLM);
+
+    }
+    setTimeout(checkWidthWindows,1000);
+
+
+
+}
 
 function changeLanguage(){
    console.log($('.languages-selecter').val());
@@ -138,12 +201,6 @@ function changeLanguage(){
     case 'Français':
 
     case 'English':
-        //  google.language.translate(text, 'es', 'en', function(result) {
-        //     var translated = document.getElementById("translation");
-        //     if (result.translation) {
-        //         translated.innerHTML = result.translation;
-        //     }
-        // }); 
 
     case 'Deutch':
 

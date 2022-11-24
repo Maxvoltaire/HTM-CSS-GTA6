@@ -153,6 +153,7 @@ header video{
 
 .block-infos{
     margin-top: 45%;
+    /* margin-top: 100%; */
     display: flex;
     justify-content:center;
     align-items:center;
@@ -226,7 +227,7 @@ header video{
         rgba(0, 0, 0, 0.6)
       ), url('../Images/gta5-online-paysage.jpeg');
     background-size: 100% auto;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     color: var(--white-color);
 }
@@ -261,7 +262,7 @@ header video{
     margin-left: 3%;
     margin-right: 3%;
     margin-bottom: 15%;
-    font-size: 1.5rem;
+    font-size: 100%;
     font-weight: bold;
     font-family:'chalet' !important;
     padding: 1.3%;
